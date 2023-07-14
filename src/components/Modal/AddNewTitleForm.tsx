@@ -90,14 +90,17 @@ export const AddNewTitleFormModal = ({ onClose, onConfirm, id }: IAddNewTitleFor
 								value={currentCategory}
 								onChange={changeCategoryHandler}
 							>
-								{masterFilterList.map((filter) => (
-									<SCModalFormSelectOption
-										value={filter.value}
-										key={filter.value}
-									>
-										{filter.display}
-									</SCModalFormSelectOption>
-								))}
+								{masterFilterList.map((filter) => {
+									if (filter.value !== 'all')
+										return (
+											<SCModalFormSelectOption
+												value={filter.value}
+												key={filter.value}
+											>
+												{filter.display}
+											</SCModalFormSelectOption>
+										);
+								})}
 							</SCModalFormSelect>
 						</SCModalFormInputSection>
 						<SCModalFormInputSection>
