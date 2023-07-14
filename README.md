@@ -35,3 +35,7 @@ The site should be able to navigate between **Home** and **List** through a _nav
         - Category (String)
         - Featured (boolean)
     
+## How to run it?
+Clone the repo to your favorite IDE, and run `npm start` to see it run on localhost.
+
+It can also be built with `npm run build`.
