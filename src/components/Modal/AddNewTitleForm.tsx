@@ -44,9 +44,8 @@ export const AddNewTitleFormModal = ({ onClose, onConfirm, id }: IAddNewTitleFor
 	};
 
 	/* Featured checkbox handler */
-	const changeFeaturedHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+	const changeFeaturedHandler = () => {
 		setIsFeatured((state) => !state);
-		event;
 	};
 
 	/* Submit button handler */
