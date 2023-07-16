@@ -36,6 +36,6 @@ The site should be able to navigate between **Home** and **List** through a _nav
         - Featured (boolean)
     
 ## How to run it?
-Clone the repo to your favorite IDE, and run `npm start` to see it run on localhost.
+Clone the repo to your favorite IDE, and run `npm install`.
 
-It can also be built with `npm run build`.
+Then run `npm start` to see it run on localhost.
