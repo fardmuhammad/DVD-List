@@ -1,22 +1,19 @@
-# NBC-DVD
+# DVD-List
 *If you want to watch Frozen on DVD, you gotta get some Monsta Cables. Gold Plated. D-V-D, baby!*
     —Jimmy Fallon
 
-This is the programming assignment given to me by the good folks at NBC Universal to see if I can follow the given instructions
+This is a sample single-page React Application
 
 ## Overall Page Requirements
-  Create a React site that has the following pages:
+ The site has the following routes:
   - Home Page
   - Details Page
   - List Page
 
-The site should be able to navigate between **Home** and **List** through a _nav bar_. 
-
 ### Home Page
   The Home page should show the following:
-  - Feature DVDs from the JSON
-    - Feature products will show name and image.
-    - Display imaged in a carousel
+  - Feature DVD images from the loaded JSON
+    - Feature products will show name and image in a carousel
   - A user should be able to click the feature product and go to the detail page.
   - A user should also be able to navigate to the List page.
 
