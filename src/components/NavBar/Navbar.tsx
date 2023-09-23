@@ -4,7 +4,7 @@ import { SCNavBar, SCNavBarLinks } from './styles';
 /* Navigation bar for the top of the page */
 const Navbar = (): JSX.Element => {
 	return (
-		<SCNavBar className="nbcNav" id="navigationBar">
+		<SCNavBar className="dvdNav" id="navigationBar">
 			<SCNavBarLinks id="navigationBarZone">
 				<Link to="/" className="homePageLink">
 					Home

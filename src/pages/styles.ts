@@ -17,7 +17,7 @@ export const SCFeaturedTitlesContainer = styled.div`
 	flex-direction: row;
 	background-color: #f1f1f1;
 	width: 300px;
-	height: 402px;
+	height: 430px;
 `;
 
 export const SCFeaturedTitle = styled.div`
@@ -40,7 +40,7 @@ export const SCFeaturedTitleName = styled.div`
 	width: calc(100% - 25px);
 	right: 0;
 	padding: 5px 20px 5px 5px;
-	bottom: 20px;
+	bottom: 12px;
 	background-color: rgba(0, 0, 0, 0.45);
 	text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.45);
 	color: #fbfbfb;
@@ -54,7 +54,7 @@ export const SCDetailsContainer = styled.div`
 
 export const SCDetailsImageContainer = styled.div`
 	width: 850px;
-	height: 1133px;
+	height: 1214px;
 	border: 1px solid #121212;
 	margin: 60px auto;
 `;
@@ -108,7 +108,7 @@ export const SCDisplayListBody = styled.div<{ $isAdmin: boolean }>`
 export const SCDisplayListCell = styled.div`
 	box-sizing: border-box;
 	border: 1px solid #121212;
-	height: 155px;
+	height: 170px;
 	overflow: hidden;
 	font-size: 18px;
 	&.image {

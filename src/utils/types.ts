@@ -1,1 +1,1 @@
-export const fallbackImg = 'img/NBC-default.png';
+export const fallbackImg = 'img/dvd-default.jpg';
