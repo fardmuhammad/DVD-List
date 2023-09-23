@@ -9,6 +9,10 @@ export enum ETitleCategory {
 	peacockoriginal = 'peacockoriginal',
 	sports = 'sports',
 	other = 'other',
+    scifi = 'scifi',
+    biopic = 'biopic',
+    animation = 'animation',
+    action = 'action',
 }
 
 export const TitleDisplayCategories = {
@@ -22,16 +26,20 @@ export const TitleDisplayCategories = {
 	[ETitleCategory.sports]: 'Sports',
 	[ETitleCategory.peacockoriginal]: 'Peacock Original',
 	[ETitleCategory.other]: 'Other',
+    [ETitleCategory.scifi]: 'Sci-Fi',
+    [ETitleCategory.biopic]: 'Biopic',
+    [ETitleCategory.animation]: 'Animation',
+    [ETitleCategory.action]: 'Action',
 };
 
-export interface INbcUserObject {
+export interface IDvdUserObject {
 	name: string;
 	category: string;
 	image: string;
 	featured?: boolean;
 }
 
-export interface INbcListObject extends INbcUserObject {
+export interface IDvdListObject extends IDvdUserObject {
 	id: number;
 }
 

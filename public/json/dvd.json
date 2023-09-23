@@ -1,0 +1,75 @@
+{
+	"items": [
+		{
+			"id": 1,
+			"name": "2012",
+			"category": "scifi",
+			"image": "img/2012.jpg"
+		},
+		{
+			"id": 2,
+			"name": "Air",
+			"category": "biopic",
+			"image": "img/air.jpg",
+			"featured": true
+		},
+		{
+			"id": 3,
+			"name": "Creed III",
+			"category": "drama",
+			"image": "img/creed3.jpg"
+		},
+		{
+			"id": 4,
+			"name": "Dune",
+			"category": "scifi",
+			"image": "img/dune.jpg"
+		},
+		{
+			"id": 5,
+			"name": "Frozen",
+			"category": "animation",
+			"image": "img/frozen.jpg",
+			"featured": true
+		},
+		{
+			"id": 6,
+			"name": "John Wick 4",
+			"category": "action",
+			"image": "img/johnwick.jpg",
+			"featured": true
+		},
+		{
+			"id": 7,
+			"name": "Pinocchio",
+			"category": "animation",
+			"image": "img/pinocchio.jpg"
+		},
+		{
+			"id": 8,
+			"name": "Star Wars: The Rise of Skywalker",
+			"category": "scifi",
+			"image": "img/riseofskywalker.jpg",
+			"featured": false
+		},
+		{
+			"id": 9,
+			"name": "Skyfall",
+			"category": "action",
+			"image": "img/skyfall.jpg"
+		},
+		{
+			"id": 10,
+			"name": "Uncharted",
+			"category": "action",
+			"image": "img/uncharted.jpg",
+            "featured": true
+		},
+		{
+			"id": 10,
+			"name": "Up",
+			"category": "animation",
+			"image": "img/up.jpg"
+		}
+	]
+}

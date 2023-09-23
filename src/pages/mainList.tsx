@@ -5,7 +5,7 @@ import {
 	addMainTitle,
 	removeTitle,
 	filterDisplayList,
-	nbcState,
+	dvdState,
 	sortDisplayList,
 } from '../features/list/listSlice';
 import {
@@ -96,15 +96,15 @@ const MainList = () => {
 
 	/* We're gonna need all of these to handle the Redux lists */
 	const {
-		nbcDisplayList: displayList,
+		dvdDisplayList: displayList,
 		currentFilter,
 		availableFilters,
 		currentSort,
-		nbcMainList,
-	} = useSelector<RootState, nbcState>((state) => state.lists);
+		dvdMainList,
+	} = useSelector<RootState, dvdState>((state) => state.lists);
 
 	/* Critical failure- the lists are nulls (not empty arrays) */
-	if (displayList === null || nbcMainList === null) {
+	if (displayList === null || dvdMainList === null) {
 		return (
 			<SCMainList id="mainListPage">
 				<SCErrorMessage id="unavailableListError">
@@ -167,7 +167,7 @@ const MainList = () => {
 								);
 							}}
 							value={displayList.length === 0 ? '' : currentFilter}
-							disabled={nbcMainList.length === 0}
+							disabled={dvdMainList.length === 0}
 						>
 							<option value="" disabled>
 								Please select a filter:
@@ -228,7 +228,7 @@ const MainList = () => {
 						{`Nothing to show. ${
 							isAdmin
 								? `Add a title${
-										nbcMainList.length ? ', or select a different filter.' : '.'
+										dvdMainList.length ? ', or select a different filter.' : '.'
 								  }`
 								: 'Use Admin Mode to add a title.'
 						}`}
@@ -255,53 +255,53 @@ const MainList = () => {
 								</SCDisplayListDeleteHeader>
 							)}
 							{/* Show all the items in the current display list */}
-							{displayList.map((nbcItem, index) => {
+							{displayList.map((dvdItem, index) => {
 								const row = [
 									<SCDisplayListCell
 										className="image"
 										id={`TableRow${index}Image`}
-										key={`${nbcItem.name}_${nbcItem.id}_image`}
+										key={`${dvdItem.name}_${dvdItem.id}_image`}
 									>
 										<SCDisplayListImage
-											src={nbcItem.image || fallbackImg}
+											src={dvdItem.image || fallbackImg}
 											width="100"
 											height="auto"
-											alt={nbcItem.name}
+											alt={dvdItem.name}
 										/>
 									</SCDisplayListCell>,
 									<SCDisplayListCell
 										className="text"
 										id={`TableRow${index}Name`}
-										key={`${nbcItem.name}_${nbcItem.id}_name`}
+										key={`${dvdItem.name}_${dvdItem.id}_name`}
 									>
 										<SCDisplayListCellText>
-											{nbcItem.name}
+											{dvdItem.name}
 										</SCDisplayListCellText>
 									</SCDisplayListCell>,
 									<SCDisplayListCell
 										className="text"
 										id={`TableRow${index}Category`}
-										key={`${nbcItem.name}_${nbcItem.id}_category`}
+										key={`${dvdItem.name}_${dvdItem.id}_category`}
 									>
-										{TitleDisplayCategories[nbcItem.category as ETitleCategory]}
+										{TitleDisplayCategories[dvdItem.category as ETitleCategory]}
 									</SCDisplayListCell>,
 									<SCDisplayListCell
 										className="featured"
 										id={`TableRow${index}Featured`}
-										key={`${nbcItem.name}_${nbcItem.id}_featured`}
+										key={`${dvdItem.name}_${dvdItem.id}_featured`}
 									>
-										{nbcItem.featured === true ? <Emoji symbol="✅" /> : ''}
+										{dvdItem.featured === true ? <Emoji symbol="✅" /> : ''}
 									</SCDisplayListCell>,
 								];
 								if (isAdmin)
 									row.push(
 										<SCDisplayListDeleteCell
 											id={`TableRow${index}Delete`}
-											key={`${nbcItem.name}_${nbcItem.id}_delete`}
+											key={`${dvdItem.name}_${dvdItem.id}_delete`}
 										>
 											<SCDisplayListDeleteCellButton
 												id={`TableRow${index}DeleteButton`}
-												onClick={() => deleteButtonHandler(nbcItem.id)}
+												onClick={() => deleteButtonHandler(dvdItem.id)}
 											>
 												<Emoji symbol="❌" />
 											</SCDisplayListDeleteCellButton>
